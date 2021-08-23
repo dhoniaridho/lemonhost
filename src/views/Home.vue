@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <default-layout>
+    <div class="home">
+      <h1>{{ numb }}</h1>
+    </div>
+  </default-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { onMounted, reactive, toRefs } from "vue";
+import DefaultLayout from "../components/layouts/DefaultLayout.vue";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  components: { DefaultLayout },
+  name: "Home",
+  setup() {
+    const state = reactive({
+      numb: 0,
+    });
+
+    const increment = () => {
+      setInterval(() => {
+        state.numb++;
+      }, 1000);
+    };
+
+    onMounted(() => {
+      increment();
+    });
+    return {
+      ...toRefs(state),
+    };
+  },
+};
 </script>
