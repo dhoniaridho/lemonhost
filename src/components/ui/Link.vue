@@ -1,5 +1,5 @@
 <template>
-  <router-link :class="classNames" class="py-3 px-5 rounded-md" :to="href">
+  <router-link :class="classNames" class="py-2 px-5 rounded-md" :to="href">
       <slot/>
   </router-link>
 </template>
