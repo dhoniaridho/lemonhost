@@ -132,7 +132,7 @@
           <span class="text-xs absolute scale-90 -mr-96 inline bg-yellow-400 rounded-full p-1 text-gray-800"
             >20% discount</span>
         </div>
-        <div class="text-3xl font-bold flex justify-center my-10">
+        <div class="text-3xl font-bold flex justify-center my-20">
           <h1 @click="setSubscription('Basic')" role="button" :class="subscription === 'Basic' ? 'border-red-700' : 'border-gray-400'" class="border-b-2 px-16">Basic</h1>
           <h1 @click="setSubscription('Premium')" role="button" :class="subscription === 'Premium' ? 'border-red-700' : 'border-gray-400'" class="border-b-2 px-16">Premium</h1>
         </div>
