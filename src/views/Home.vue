@@ -119,7 +119,7 @@
         <div class="mt-7 flex justify-center place-items-center">
           <div class="flex place-items-center">
             <div>
-            <h1>Monthly</h1>
+              <h1>Monthly</h1>
             </div>
           </div>
           <label class="switch mx-10">
@@ -129,43 +129,130 @@
           <div class="flex place-items-center">
             <h1>Yearly</h1>
           </div>
-          <span class="text-xs absolute scale-90 -mr-96 inline bg-yellow-400 rounded-full p-1 text-gray-800"
-            >20% discount</span>
+          <span
+            class="
+              text-xs
+              absolute
+              scale-90
+              -mr-96
+              inline
+              bg-yellow-400
+              rounded-full
+              p-1
+              text-gray-800
+            "
+            >20% discount</span
+          >
         </div>
         <div class="text-3xl font-bold flex justify-center my-20">
-          <h1 @click="setSubscription('Basic')" role="button" :class="subscription === 'Basic' ? 'border-red-700' : 'border-gray-400'" class="border-b-2 px-16">Basic</h1>
-          <h1 @click="setSubscription('Premium')" role="button" :class="subscription === 'Premium' ? 'border-red-700' : 'border-gray-400'" class="border-b-2 px-16">Premium</h1>
+          <h1
+            @click="setSubscription('Basic')"
+            role="button"
+            :class="
+              subscription === 'Basic' ? 'border-red-700' : 'border-gray-400'
+            "
+            class="border-b-2 px-16"
+          >
+            Basic
+          </h1>
+          <h1
+            @click="setSubscription('Premium')"
+            role="button"
+            :class="
+              subscription === 'Premium' ? 'border-red-700' : 'border-gray-400'
+            "
+            class="border-b-2 px-16"
+          >
+            Premium
+          </h1>
         </div>
         <div class="flex justify-around">
-          <div v-for="p in pricing" :key="p" class="border w-1/3 mx-10 text-left p-5 rounded-lg">
+          <div
+            v-for="p in pricing"
+            :key="p"
+            class="border w-1/3 mx-10 text-left p-5 rounded-lg"
+          >
             <div>
-              <h1 class="text-3xl font-bold">{{p.title}}</h1>
-              <p class="text-xs mt-2">with all your customers via all conversation channels in one central dashboard.</p>
+              <h1 class="text-3xl font-bold">{{ p.title }}</h1>
+              <p class="text-xs mt-2">
+                with all your customers via all conversation channels in one
+                central dashboard.
+              </p>
             </div>
             <div class="mt-6">
-              <h1 class="text-3xl font-bold">{{p.price}}</h1>
+              <h1 class="text-3xl font-bold">{{ p.price }}</h1>
               <p class="text-sm font-light">Per month</p>
               <Link class="block text-center my-8" href="/" type="secondary">
                 Choose this Plan
               </Link>
             </div>
             <ul class="mt-5 text-gray-500">
-              <li v-for="feature in p.features" :key="feature" class="my-3 flex">
-                  <CheckIcon class="w-5 mr-10" />
-                <p>{{feature}}</p>
+              <li
+                v-for="feature in p.features"
+                :key="feature"
+                class="my-3 flex"
+              >
+                <CheckIcon class="w-5 mr-10" />
+                <p>{{ feature }}</p>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
+    <section class="px-20 py-10 flex justify-between place-items-center">
+      <div class="w-1/2">
+        <div class="w-3/4">
+          <h1 class="text-4xl font-bold">
+            We serve over 100 Nigerian Websites
+          </h1>
+          <p class="text-gray-600 mt-3 text-sm">
+            Connect LemonWares with your favourite tools that you use daily and
+            keep things on track.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="grid grid-cols-3 gap-10 w-11/12">
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="m-10 bg-gray-100 px-20 py-40 rounded-md flex flex-col justify-center">
+        <h1 class="text-5xl font-semibold">We're here to make your website awesome.</h1>
+        <Link class="mt-20 inline-block mx-auto" type="primary" href="/">Get  in touch with us</Link>
+      </div>
+    </section>
   </default-layout>
 </template>
 
 <script>
-
 import { onMounted, reactive, toRefs } from "vue";
-import { CheckIcon } from '@heroicons/vue/outline'
+import { CheckIcon } from "@heroicons/vue/outline";
 import DefaultLayout from "../components/layouts/DefaultLayout.vue";
 import Link from "../components/ui/Link.vue";
 
@@ -208,22 +295,55 @@ export default {
         {
           title: "Starter",
           price: "$2.80",
-          description: "with all your customers via all conversation channels in one central dashboard.",
-          features: ["2 GB SSD", "10GB Bandwidth", "15 Email Accounts", "Unlimited Database", "4 Subdomains", "1 Parked Domain", "2 Websites", "Free SSL", "Softaculous"]
+          description:
+            "with all your customers via all conversation channels in one central dashboard.",
+          features: [
+            "2 GB SSD",
+            "10GB Bandwidth",
+            "15 Email Accounts",
+            "Unlimited Database",
+            "4 Subdomains",
+            "1 Parked Domain",
+            "2 Websites",
+            "Free SSL",
+            "Softaculous",
+          ],
         },
         {
           title: "Standard",
           price: "$4.20",
-          description: "with all your customers via all conversation channels in one central dashboard.",
-          features: ["2 GB SSD", "10GB Bandwidth", "15 Email Accounts", "Unlimited Database", "4 Subdomains", "1 Parked Domain", "2 Websites", "Free SSL", "Softaculous"]
+          description:
+            "with all your customers via all conversation channels in one central dashboard.",
+          features: [
+            "2 GB SSD",
+            "10GB Bandwidth",
+            "15 Email Accounts",
+            "Unlimited Database",
+            "4 Subdomains",
+            "1 Parked Domain",
+            "2 Websites",
+            "Free SSL",
+            "Softaculous",
+          ],
         },
         {
           title: "Suprem",
           price: "$7.00",
-          description: "with all your customers via all conversation channels in one central dashboard.",
-          features: ["2 GB SSD", "10GB Bandwidth", "15 Email Accounts", "Unlimited Database", "4 Subdomains", "1 Parked Domain", "2 Websites", "Free SSL", "Softaculous"]
+          description:
+            "with all your customers via all conversation channels in one central dashboard.",
+          features: [
+            "2 GB SSD",
+            "10GB Bandwidth",
+            "15 Email Accounts",
+            "Unlimited Database",
+            "4 Subdomains",
+            "1 Parked Domain",
+            "2 Websites",
+            "Free SSL",
+            "Softaculous",
+          ],
         },
-      ]
+      ],
     });
 
     const handleService = (selected) => {
