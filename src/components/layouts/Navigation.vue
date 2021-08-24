@@ -1,11 +1,12 @@
 <template>
   <header>
-      <nav class="px-20 bg-white shadow-md">
-          <div class="h-16 w-full flex place-items-center justify-between">
-                <div>
-                    a
+      <nav class="px-20 bg-white font-semibold">
+          <div class="h-24 w-full flex place-items-center justify-between">
+                <div class="flex justify-around place-items-center w-1/3">
+                    <img class="h-1/2" src="https://i.ibb.co/wKLvqTR/brand.png" alt="brand">
+                    <a href="">Our Services</a>
                 </div>
-                <div class="flex justify-around">
+                <div class="flex justify-center place-items-center w-1/3">
                     <div class="mx-1">
                         <a href="#">About</a>
                     </div>
@@ -16,7 +17,7 @@
                         <a href="#">Contact</a>
                     </div>
                 </div>
-                <div class="flex justify-around">
+                <div class="flex justify-center place-items-center w-1/3">
                     <div class="mx-1">
                         <a href="#">Login</a>
                     </div>
