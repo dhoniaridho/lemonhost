@@ -1,12 +1,12 @@
 <template>
-  <footer class="bg-red-700 text-white px-20 pt-10">
-    <div class="flex">
-        <div class="w-1/4">
+  <footer class="bg-red-700 text-white px-5 md:px-20 pt-10">
+    <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/4">
             <img src="https://i.ibb.co/VL3mvPp/Lemon-Wares-white-Logo-1500px-wide-1.png" alt="">
             <p class="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elem</p>
         </div>
-        <div class="flex-grow flex mx-20 text-md">
-            <div class="w-1/4 capitalize">
+        <div class="flex-grow flex-col md:flex-row flex md:mx-20 mt-10 text-md">
+            <div class="md:w-1/4 capitalize">
                 <ul>
                     <li class="font-bold mb-5">service</li>
                     <li class="font-light my-5" v-for="service in services" :key="service">
@@ -14,7 +14,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="w-1/4 capitalize">
+            <div class="md:w-1/4 capitalize">
                 <ul>
                     <li class="font-bold mb-4">hosting</li>
                     <li class="font-light my-5" v-for="hosting in hostings" :key="hosting">
@@ -30,7 +30,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="w-1/4 capitalize">
+            <div class="md:w-1/4 capitalize">
                 <ul>
                     <li class="font-bold mb-4">help</li>
                       <li class="font-light my-5" v-for="help in helps" :key="help">

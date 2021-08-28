@@ -1,12 +1,12 @@
 <template>
   <header>
-      <nav class="px-20 bg-white font-semibold">
+      <nav class="px-5 md:px-20 bg-white font-semibold">
           <div class="h-24 w-full flex place-items-center justify-between">
                 <div class="flex justify-around place-items-center w-1/3">
                     <img class="h-1/2" src="https://i.ibb.co/wKLvqTR/brand.png" alt="brand">
-                    <a href="">Our Services</a>
+                    <a class="hidden md:block" href="">Our Services</a>
                 </div>
-                <div class="flex justify-center place-items-center w-1/3">
+                <div class="hidden md:flex justify-center place-items-center w-1/3">
                     <div class="mx-1">
                         <a href="#">About</a>
                     </div>

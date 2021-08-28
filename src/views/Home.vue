@@ -1,7 +1,18 @@
 <template>
   <default-layout>
-    <section class="h-[calc(100vh-6rem)] flex justify-between py-10 px-20">
-      <div class="w-1/2">
+    <section
+      class="
+        h-[calc(100vh-6rem)]
+        flex
+        justify-between
+        md:flex-row
+        flex-col
+        py-10
+        px-5
+        md:px-20
+      "
+    >
+      <div class="md:w-1/2 order-2 md:order-1 my-5">
         <div class="font-semibold">
           <div
             role="button"
@@ -54,16 +65,16 @@
           </Link>
         </div>
       </div>
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2 order-1 md:order-2">
         <img
           class="object-scale-down"
           src="https://i.ibb.co/QQ6Gqgn/hero.png"
         />
       </div>
     </section>
-    <section class="flex flex-col px-20 py-20">
-      <div class="flex justify-between mt-10">
-        <div class="w-1/2">
+    <section class="flex flex-col px-5 md:px-20 py-20">
+      <div class="flex justify-between flex-col md:flex-row mt-10">
+        <div class="md:w-1/2">
           <h1 class="text-4xl font-bold">True Cloud Web Hosting</h1>
           <p class="mt-8 text-sm w-3/4">
             True Cloud Web Hosting All of the hosting packages we offer are
@@ -72,7 +83,7 @@
             infrastructure is built to be reliable, secure, and scalable.
           </p>
         </div>
-        <div class="w-1/2 grid grid-cols-3 gap-8">
+        <div class="md:w-1/2 mt-5 grid grid-cols-3 gap-8 px-5 md:px-0">
           <div>
             <img src="https://i.ibb.co/pJwRL1K/1.png" alt="provider" />
           </div>
@@ -93,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-flow-col gap-5 py-20 px-10">
+      <div class="grid md:grid-flow-col gap-5 py-20 px-10">
         <div
           class="text-center"
           v-for="solution in solutions"
@@ -109,7 +120,7 @@
         </div>
       </div>
     </section>
-    <section class="py-10 px-20">
+    <section class="py-10 px-5 sm:px-10 md:px-20">
       <div class="text-center">
         <h1 class="text-4xl font-bold">
           Ready to get started with <br />
@@ -122,7 +133,7 @@
               <h1>Monthly</h1>
             </div>
           </div>
-          <label class="switch mx-10">
+          <label class="switch md:mx-10 mx-2">
             <input type="checkbox" checked />
             <span class="slider round"></span>
           </label>
@@ -133,8 +144,8 @@
             class="
               text-xs
               absolute
-              scale-90
-              -mr-96
+              scale-90 -mr-72
+              md:-mr-96
               inline
               bg-yellow-400
               rounded-full
@@ -144,14 +155,14 @@
             >20% discount</span
           >
         </div>
-        <div class="text-3xl font-bold flex justify-center my-20">
+        <div class="text-3xl font-bold flex justify-center my-20 px-5">
           <h1
             @click="setSubscription('Basic')"
             role="button"
             :class="
               subscription === 'Basic' ? 'border-red-700' : 'border-gray-400'
             "
-            class="border-b-2 px-16"
+            class="border-b-2 px-10 md:px-16"
           >
             Basic
           </h1>
@@ -161,16 +172,16 @@
             :class="
               subscription === 'Premium' ? 'border-red-700' : 'border-gray-400'
             "
-            class="border-b-2 px-16"
+            class="border-b-2 px-10 md:px-16"
           >
             Premium
           </h1>
         </div>
-        <div class="flex justify-around">
+        <div class="flex justify-around flex-col md:flex-row">
           <div
             v-for="p in pricing"
             :key="p"
-            class="border w-1/3 mx-10 text-left p-5 rounded-lg"
+            class="border md:w-1/3 my-5 md:mx-10 text-left p-5 rounded-lg"
           >
             <div>
               <h1 class="text-3xl font-bold">{{ p.title }}</h1>
@@ -200,12 +211,10 @@
         </div>
       </div>
     </section>
-    <section class="px-20 py-10 flex justify-between place-items-center">
-      <div class="w-1/2">
-        <div class="w-3/4">
-          <h1 class="text-4xl font-bold">
-            We serve over 100 Nigerian Websites
-          </h1>
+    <section class="px-20 py-10 flex justify-between flex-col md:flex-row place-items-center">
+      <div class="md:w-1/2 order-2 md:order-1">
+        <div class="md:w-3/4">
+          <h1 class="text-4xl font-bold">We serve over 100 Websites</h1>
           <p class="text-gray-600 mt-3 text-sm">
             Connect LemonWares with your favourite tools that you use daily and
             keep things on track.
@@ -213,7 +222,7 @@
         </div>
       </div>
       <div>
-        <div class="grid grid-cols-3 gap-10 w-11/12">
+        <div class="grid grid-cols-3 gap-10 md:w-11/12 order-1 md:order-2">
           <img
             src="https://i.ibb.co/txk75Yv/Leeve-On-Branding-bw-oyl3fl090kplvrcow9vmwmkbvvknw8qajniecucqo0-1.png"
             alt=""
@@ -242,9 +251,21 @@
       </div>
     </section>
     <section>
-      <div class="m-10 bg-gray-100 px-20 py-40 rounded-md flex flex-col justify-center">
-        <h1 class="text-5xl font-semibold">We're here to make your website awesome.</h1>
-        <Link class="mt-20 inline-block mx-auto" type="primary" href="/">Get  in touch with us</Link>
+      <div
+        class="
+          m-10
+          bg-gray-100
+          px-20
+          py-40
+          rounded-md flex flex-col justify-center
+        "
+      >
+        <h1 class="text-2xl md:text-5xl font-semibold text-center">
+          We're here to make your website awesome.
+        </h1>
+        <Link class="mt-20 inline-block mx-auto" type="primary" href="/"
+          >Get in touch with us</Link
+        >
       </div>
     </section>
   </default-layout>
