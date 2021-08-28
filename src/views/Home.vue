@@ -2,7 +2,7 @@
   <default-layout>
     <section
       class="
-        h-[calc(100vh-6rem)]
+        min-h-[calc(100vh-6rem)]
         flex
         justify-between
         md:flex-row
